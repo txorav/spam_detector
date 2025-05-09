@@ -1,4 +1,5 @@
 # Spam Detector
+[screenshot](https://github.com/txorav/spam_detector/blob/main/screenshot.png)
 Tech Stack : 
 Frontend **Flutter** 
 Proccessing **Python**
