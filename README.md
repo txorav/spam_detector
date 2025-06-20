@@ -16,6 +16,8 @@ libraries like
 
 TODO : 
 - [x] create better model
+- [ ] add linux support
+- [ ] better error handling
 - [ ] add web and mobile support
 - [ ] add backend service in GO
 
