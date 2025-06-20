@@ -1,16 +1,13 @@
 # Free Palestine ( please pray and help and spread and support the Matter ) 
 # Spam Detector
 <img src="https://github.com/txorav/spam_detector/blob/main/screenshot.png">
-Tech Stack : 
-Frontend **Flutter** 
-Proccessing **Python**
-model made based on **dataset from different sources i will mention them later version** on spam emails
-and **logistic regression** and **naive bayes** and **decision tree classifier** as ML algorithms
-note : this project works well in windows only
-## models accuarcy :
-- naive bayes ---> 98%
-- logisitic regression ---> 97%
-- decision tree classifier ---> idk%
+
+## Tech Stack :
+- Frontend **Flutter** 
+- Proccessing **Python**
+- model made based on **Kaggle dataset** on spam emails
+and **logistic regression** as ML algorithm
+
 ## run the app :  
 - [ ] flutter installed 
 - [ ] Python installed 
