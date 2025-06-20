@@ -1,5 +1,5 @@
 # Free Palestine ( please pray and help and spread and support the Matter ) 
-<img src="https://github.com/txorav/spam_detector/blob/main/logo.png">
+<img src="https://github.com/txorav/spam_detector/blob/main/logo.png" width="100" height="100">
 
 # Spam Detector
 # Spectix
