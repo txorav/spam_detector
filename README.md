@@ -1,3 +1,4 @@
+# Free Palestine ( please pray and help and spread and support the Matter ) 
 # Spam Detector
 <img src="https://github.com/txorav/spam_detector/blob/main/screenshot.png">
 Tech Stack : 
@@ -14,7 +15,7 @@ libraries like
 - [ ] scikitlearn
 
 TODO : 
-- [ ] create better model
+- [x] create better model
 - [ ] add web and mobile support
 - [ ] add backend service in GO
 
