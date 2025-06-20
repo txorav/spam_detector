@@ -59,6 +59,7 @@ class Test extends StatefulWidget {
 }
 
 TextEditingController thing = TextEditingController();
+TextEditingController thingie = TextEditingController();
 bool isho = false;
 bool isSpam = false;
 bool isFirst = true;
@@ -73,13 +74,14 @@ class _TestState extends State<Test> {
     return res;
   }
 
-  void checkEmail(String text) async {
+  void checkEmail(String text,String modelName) async {
     setState(() {
       isLoading = true;
     });
-    ProcessResult result = await Process.run('python', [
+    ProcessResult result = await Process.run('python3', [
       r'C:\Users\DEV\Documents\projects\SpamDetection\spam_detector\backend\main.py',
       text,
+      modelName,
     ]);
     print(result.stdout);
     print(result.stderr);
@@ -89,6 +91,11 @@ class _TestState extends State<Test> {
       int.parse(result.stdout) == 0 ? isSpam = false : isSpam = true;
     });
     print(isSpam);
+  }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
   }
 
   @override
@@ -123,6 +130,27 @@ class _TestState extends State<Test> {
                     TextField(
                       controller: thing,
                       decoration: InputDecoration(
+                        hintText: "Please write an email to know whether its spam or no",
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            width: 2,
+                            color: Colors.black87,
+                          ),
+                        ),
+                        focusColor: Colors.black87,
+                        hoverColor: Colors.black87,
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            width: 2,
+                            color: Color(0x4C4B5563),
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextField(
+                      controller: thingie,
+                      decoration: InputDecoration(
+                        hintText: "please write nb for naivebayes and dt for decision tree classifier and lr for logistic regression",
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             width: 2,
@@ -151,7 +179,7 @@ class _TestState extends State<Test> {
                         });
                       },
                       child: GestureDetector(
-                        onTap: isLoading ? null : () => checkEmail(thing.text),
+                        onTap: isLoading ? null : () => checkEmail(thing.text,thingie.text),
                         child: Container(
                           width: 400,
                           child: Center(
